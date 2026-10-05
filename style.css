@@ -87,6 +87,27 @@
     width: min(72vw, 1100px);
   }
 
+  /* Three images under the highlighted subheading; viewport height is set and fixed so the page doesn't need to be scrolled VN */
+  .hero-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: min(72vw, 1100px);
+    margin-top: 7vh; /* 7vh away from the bottom of the subheading VN */
+  }
+
+  .hero-images img {
+    display: block;
+    width: auto;
+    max-width: 30%;
+    object-fit: contain;
+  }
+
+  /* heights for all three images are already set and fixed here VN*/
+  .img-scales { height: 26vh; }
+  .img-heart  { height: 33vh; }
+  .img-code   { height: 21vh; }
+
   /* -------------- This is the section for the inner pages MS-------------------------*/
 .page .site-header {
     position: static; /* nav sits in normal flow on pages that scroll MS */
