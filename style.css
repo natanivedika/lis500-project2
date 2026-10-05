@@ -40,7 +40,7 @@
   }
   
   .nav-links a {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none;
   }
@@ -52,7 +52,7 @@
     text-underline-offset: 6px;
   }
   
-  /* This is the Splash Page section VN */
+  /* ------------- This is the Splash Page section VN -------------------*/
   body.splash {
     height: 100vh;
     overflow: hidden; /* splash page never scrolls VN*/
@@ -86,3 +86,54 @@
     font-weight: 700;
     width: min(72vw, 1100px);
   }
+
+  /* -------------- This is the section for the inner pages MS-------------------------*/
+.page .site-header {
+    position: static; /* nav sits in normal flow on pages that scroll MS */
+    padding-bottom: 0;
+  }
+   
+  .content {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 5rem;
+    font-size: 1.1rem;
+    line-height: 1.55;
+  }
+   
+  .page-title {
+    margin: 0 0 2rem;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+   
+  .page-title span {
+    display: block;
+    padding: 0.6rem 1rem;
+    background: var(--highlight);
+  }
+   
+  .block p { margin: 0 0 1.4rem; }
+   
+  .block h2 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+   
+  /* dashed divider between sections MS*/
+  .divided {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 2px dashed var(--ink);
+  }
+   
+  /* empty space for the reflection text TODO */
+  #reflection { min-height: 22rem; }
+   
+  .resource-list,
+  .resource-list ul { margin: 0; padding-left: 2rem; }
+   
+  .resource-list ul { margin-top: 0.25rem; }
+  .resource-list ul { list-style: circle; }
