@@ -16,11 +16,12 @@
   html, body { height: 100%; margin: 0; }
   
   body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--font-body);
+    background: var(--paper); /* page background = white VN */
+    color: var(--ink); /* default text color = black VN */
+    font-family: var(--font-body); /* just in case google fonts don't load correctly, font-body above is the backup font VN */
   }
   
+  /* Instead of links turning blue by default, the link color will be the same as the text VN */
   a { color: inherit; }
   
   /* This is the navbar section, and it is shared by all pages VN */
@@ -47,11 +48,13 @@
     text-decoration: none;
   }
   
+  /* when the mouse is over the link, it is selected by clicking it VN */
   .nav-links a:hover,
   .nav-links a:focus-visible {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 6px;
+    text-decoration: underline; /* When a mouse hovers over the pages in the nav bar, the names are underlined to indicate that they can be clicked VN */
+    
+    text-decoration-thickness: 3px; /* The underline is a bit thicker than the text VN */
+    text-underline-offset: 6px; /* The underline sits a few pixels below the text VN */
   }
   
   /* ------------- This is the Splash Page section VN -------------------*/
@@ -131,6 +134,7 @@
     font-weight: 700;
   }
    
+  /* Page title with the yellow highlight MS */
   .page-title span {
     display: block;
     padding: 0.6rem 1rem;
@@ -200,7 +204,7 @@
   display: block;
 }
 
-/* Styles below are for Tech Hero page RX*/
+/* -------------- Styles below are for Tech Hero page RX -----------------------*/
 .tech-hero .page-title { margin-bottom: 2rem; }
  
 .tech-hero .page-title span {
@@ -238,7 +242,7 @@
 }
  
 .tags {
-  display: flex;
+  display: flex; /* using flex to stack the text instead of setting margins each time RX */
   flex-direction: column;
   align-items: flex-start;
   gap: 0.6rem;
@@ -247,6 +251,7 @@
   list-style: none;
 }
  
+/* This is for each individual "tag" RX */
 .tags li {
   padding: 0.4rem 1.4rem;
   border-radius: 999px;
@@ -254,13 +259,14 @@
   font-size: 1.05rem;
 }
  
-/* right column: bio + callout */
+/* right column: bio + callout text RX */
 .hero-bio {
   margin: 0 0 1rem;
   font-size: clamp(1.1rem, 1.9vw, 1.4rem);
   line-height: 1.5;
 }
  
+/* text with lavendar background RX */
 .callout {
   padding: 0.75rem 1rem 1.25rem;
   background: var(--lavender);
@@ -272,6 +278,7 @@
 .callout ul { margin: 0; padding-left: 2rem; }
 .callout a { color: var(--ink); text-decoration: underline; }
  
+/* quote that runs along the bottom on the webpage RX */
 .hero-quote {
   margin: 2rem 0 0;
   text-align: center;
