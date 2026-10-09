@@ -1,46 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  
   <title>Code and Power</title>
 
-  <!-- Following instructions from Stack Overflow, this part of the code links to google fonts, so we can use a font we like VN-->
+  <!-- These three lines connect and load Google Fonts, so we can use the fonts we like (used Stack Overflow as reference) VN-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="splash">
 
-  <header class="site-header">
-    <nav aria-label="Main navigation">
 
-        <!-- This part of the code is the navigation bar. It is structured as an unordered list, and it contains links to the three required pages VN-->
-      <ul class="nav-links">
-        <li><a href="resource-guide.html">Resource Guide</a></li>
-        <li><a href="tech-heroes.html">Tech Heroes</a></li>
-        <li><a href="about-us.html">About Us</a></li>
+    <!-- This is the navbar, and it will stay the same across all pages of the website. It links to the 3 required pages plus the splash page VN-->
+  <header class="splash-nav">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li class="nav-home">
+          <a href="index.html" aria-current="page">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="resource-guide.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Resource Guide</span>
+          </a>
+        </li>
+        <li>
+          <a href="tech-heroes.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Tech Heroes</span>
+          </a>
+        </li>
+        <li>
+          <a href="about-us.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>About Us</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="hero">
-    <h1>Code and Power</h1>
+  <!-- This is the "stage" where the three selected dates are stacked in red VN -->
+  <main class="stage">
 
-    <!--This is a subheading under the title. It is highlighted yellow, according to the CSS class "tagline" VN-->
-    <p class="tagline">analyzing and critiquing representation in computing industries</p>
+    <ul class="dates" aria-label="Key dates in computing history">
+      <li>
+        <span class="date"><span class="day">14</span><span class="month">Oct</span></span>
+        <span class="event">Ada Lovelace Day</span>
+      </li>
+      <li>
+        <span class="date"><span class="day">27</span><span class="month">Oct</span></span>
+        <span class="event">World Coding Day</span>
+      </li>
+      <li>
+        <span class="date"><span class="day">09</span><span class="month">Dec</span></span>
+        <span class="event">Grace Hopper’s Birthday</span>
+      </li>
+    </ul>
 
-    <!-- This section has 3 images embedded underneath the subheading VN-->
-    <!-- All images are free to use from Unsplash VN-->
-    <div class="hero-images">
-        <img class="img-scales" src="assets/bias_img.jpg" alt="Bias">
-        <img class="img-heart" src="assets/inclusion_img.jpg" alt="Inclusion">
-        <img class="img-code" src="assets/code_img.jpg" alt="Code">
+    <div class="intro">
+      <img class="banner" src="assets/splash-banner_img.png" alt="Women working">
+      <div class="intro-text">
+        <h1>Code and Power</h1>
+        <p class="tagline">analyzing and critiquing representation in computing industries</p>
       </div>
+    </div>
+
   </main>
+
+  <!-- Red bar at the bottom with the class name and group members' names. This is in the form an unordered list VN -->
+  <footer class="credits">
+    <ul>
+      <li>LIS 500</li>
+      <li>Vedika Natani</li>
+      <li>Monisha Suresh</li>
+      <li>Ray Xue</li>
+    </ul>
+  </footer>
 
 </body>
 </html>

@@ -1,288 +1,202 @@
-/* These are some Global variables defined at the top. These will be used throughout the website VN */
+/* constant variables that will be used throughout the website VN */
 :root {
-    --ink: #000;
-    --paper: #fff;
-    --highlight: #fbe9a6;
-    --font-display: "Anton", "Impact", "Arial Narrow Bold", sans-serif;
-    --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-    --purple: #b854d1;
-    --lavender: #e2a9f1;
-  }
-  
-  /* Referenced Stack Overflow article to apply box sizing property to EVERY element along with before and after pseudo elements in the webpage VN*/
-  /* https://stackoverflow.com/questions/69142205/can-this-code-section-before-after-boxsizing-border-box-work */
-  *, *::before, *::after { box-sizing: border-box; }
-  
-  html, body { height: 100%; margin: 0; }
-  
-  body {
-    background: var(--paper); /* page background = white VN */
-    color: var(--ink); /* default text color = black VN */
-    font-family: var(--font-body); /* just in case google fonts don't load correctly, font-body above is the backup font VN */
-  }
-  
-  /* Instead of links turning blue by default, the link color will be the same as the text VN */
-  a { color: inherit; }
-  
-  /* This is the navbar section, and it is shared by all pages VN */
-  .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1.75rem 4rem;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 4rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .nav-links a {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-decoration: none;
-  }
-  
-  /* when the mouse is over the link, it is selected by clicking it VN */
-  .nav-links a:hover,
-  .nav-links a:focus-visible {
-    text-decoration: underline; /* When a mouse hovers over the pages in the nav bar, the names are underlined to indicate that they can be clicked VN */
-    
-    text-decoration-thickness: 3px; /* The underline is a bit thicker than the text VN */
-    text-underline-offset: 6px; /* The underline sits a few pixels below the text VN */
-  }
-  
-  /* ------------- This is the Splash Page section VN -------------------*/
-  body.splash {
-    height: 100vh;
-    overflow: hidden; /* splash page never scrolls VN*/
-  }
-  
-  .hero {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    margin: 0;
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: clamp(3.5rem, 9vw, 7.5rem);
-    line-height: 1.1;
-    text-transform: none;
-  }
-  
-  /* This is what gives the subheading a highlight VN */
-  .tagline {
-    margin: 0.4rem 0 0;
-    padding: 0.6rem 2.5rem;
-    background: var(--highlight);
-    font-size: clamp(1.1rem, 2.4vw, 2rem);
-    font-weight: 700;
-    width: min(72vw, 1100px);
-  }
+  --ink: #000;                /* main text color (black) VN */
+  --cream: #fff5ec;           /* page background VN */
+  --brick: #b93f38;           /* red: title, date cards, footer bar VN */
 
-  /* Three images under the highlighted subheading; viewport height is set and fixed so the page doesn't need to be scrolled VN */
-  .hero-images {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    width: min(72vw, 1100px);
-    margin-top: 7vh; /* 7vh away from the bottom of the subheading VN */
-  }
-
-  .hero-images img {
-    display: block;
-    width: auto;
-    max-width: 30%;
-    object-fit: contain;
-  }
-
-  /* heights for all three images are already set and fixed here VN*/
-  .img-scales { height: 26vh; }
-  .img-heart  { height: 33vh; }
-  .img-code   { height: 21vh; }
-
-  /* -------------- This is the section for an inner page: Resource Page MS-------------------------*/
-.page .site-header {
-    position: static; /* nav sits in normal flow on pages that scroll MS */
-    padding-bottom: 0;
-  }
-   
-  .content {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 1.5rem 1.5rem 5rem;
-    font-size: 1.1rem;
-    line-height: 1.55;
-  }
-   
-  .page-title {
-    margin: 0 0 2rem;
-    text-align: center;
-    font-size: 1.35rem;
-    font-weight: 700;
-  }
-   
-  /* Page title with the yellow highlight MS */
-  .page-title span {
-    display: block;
-    padding: 0.6rem 1rem;
-    background: var(--highlight);
-  }
-   
-  .block p { margin: 0 0 1.4rem; }
-   
-  .block h2 {
-    margin: 0 0 1.25rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-   
-  /* dashed divider between sections MS*/
-  .divided {
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 2px dashed var(--ink);
-  }
-
-  /* -------------- This is the section for an inner page: About Us VN-------------------------*/
-  .content.wide { max-width: 1240px; }
- 
-.about-us .page-title { margin-bottom: 2.0rem; }
- 
-/* set margin to 0 and auto because we don't want the yellow highlight to span across the entire window VN*/
-.about-us .page-title span {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
-  font-size: clamp(1.6rem, 3vw, 1.35rem); /* minimum, preferred, max VN*/
+  /* we will be using our chosen fonts from Google Fonts. If they fail to load, we listed some backup fonts below VN */
+  --font-display: "Anton", "Impact", "Arial Narrow Bold", sans-serif;   /* big title and date numbers VN */
+  --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;      /* everything else VN */
 }
- 
-.members {
+
+
+/* ---------- This is the "base" / what we will be using throughout the website VN ---------- */
+/* Makes width and height include padding and borders, so sizes are easier to work with VN */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Remove the browser's default margin around the page VN */
+html, body { height: 100%; margin: 0; }
+
+body {
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+/* the links will be the same color as the text instead of turning blue VN */
+a { color: inherit; }
+
+
+/* ---------- 3. Splash page (index.html) ---------- */
+/* ".splash" is the class on the <body> of index.html, so these rules
+   only apply to this page VN */
+.splash {
+  /* The page is split into three stacked rows: navbar on top, main
+     content in the middle (1fr = takes all the leftover height), and the
+     footer bar at the bottom. There's no max-width, so the page always
+     reaches the edges of the browser window. VN */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;               /* vh = percent of the window height VN */
+  height: 100dvh;              
+  overflow: hidden;            /* we don't want the splash page to scroll VN */
+  background: var(--cream);
+}
+
+/* --- navbar: Home on the left, three page links on the right VN --- */
+
+.splash-nav { padding: 1.2vh 5vw 0 3vw; }
+
+.splash-nav ul {
+  display: flex;
+  align-items: flex-start;
+  gap: 6vw;                    /* space between the links VN */
+  margin: 0;
+  padding: 0;
+  list-style: none;            /* removes the bullet points VN */
+}
+
+/* An auto margin on the right takes up all the free space, which pushes
+   the other three links to the far right edge VN */
+.splash-nav .nav-home { margin-right: auto; }
+
+.splash-nav a {
+  display: flex;
+  flex-direction: column; /* folder icon on top, label underneath VN */
+  align-items: center;
+  gap: 0.3rem;
+  /* from Stack Overflow: clamp(smallest, preferred, largest): scales with screen width but
+     never gets smaller or bigger than the limits VN */
+  font-size: clamp(1rem, 1.2vw, 1.7rem);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* hover means mouse is over the page link VN */
+.splash-nav a:hover,
+.splash-nav a:focus-visible { color: var(--brick); }
+
+/* The folder icon image VN */
+.folder { display: block; width: clamp(40px, 4.8vw, 50px); height: auto; }
+
+/* --- main area: date cards on the left, banner + title on the right VN --- */
+.stage {
+  display: grid;
+  grid-template-columns: 32vw 1fr;   /* left column is 32% of the screen VN */
+  column-gap: 4vw;
+  padding: 0 2.5vw 3vh 2vw;
+  min-height: 0;   /* lets the grid shrink to fit the screen instead of overflowing VN */
+}
+
+/* Date cards, stacked vertically and pinned to the bottom of the left column VN */
+.dates {
+  align-self: end;  /* sit at the bottom of the column VN */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
- 
-/* photo then icon then text VN */
-.member {
-  display: grid;
-  grid-template-columns: 250px 190px 1fr;
-  align-items: center;
-  column-gap: 2rem;
-}
- 
-.member p {
-  margin: 0;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
- 
-.member-photo {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
- 
-.member-icon {
-  width: 100%;
-  max-height: 170px;
-  object-fit: contain;
-  display: block;
-}
-
-/* -------------- Styles below are for Tech Hero page RX -----------------------*/
-.tech-hero .page-title { margin-bottom: 2rem; }
- 
-.tech-hero .page-title span {
-  max-width: 440px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
-  font-size: clamp(1.2rem, 3vw, 1.35rem);
-}
- 
-.hero-profile {
-  display: grid;
-  grid-template-columns: minmax(240px, 28%) 1fr;
-  column-gap: 2.5rem;
-  align-items: start;
-}
- 
-/* left column: photo, name, tags */
-.hero-photo {
-  display: block;
-  width: 100%;
-  aspect-ratio: 6 / 7;
-  object-fit: cover;
-}
- 
-.hero-name {
-  margin: 1rem 0 0.75rem;
-  text-align: center;
-  font-size: 1.7rem;
-  font-weight: 700;
-}
- 
-.hero-name a {
-  color: var(--purple);
-  text-decoration: underline;
-}
- 
-.tags {
-  display: flex; /* using flex to stack the text instead of setting margins each time RX */
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
+  gap: 2.2vh;
   margin: 0;
   padding: 0;
   list-style: none;
+  color: var(--brick);   /* red text for every card VN*/
 }
- 
-/* This is for each individual "tag" RX */
-.tags li {
-  padding: 0.4rem 1.4rem;
+
+/* One card: the date on the left, the event name filling the rest VN */
+.dates li {
+  display: grid;
+  grid-template-columns: auto 1fr;   /* "auto" fits the date; "1fr" lets the event name use the remaining space VN */
+  align-items: center;
+  column-gap: 1.2vw;
+  padding: 0.8vh 1.5vw;
+  border: 2px solid var(--brick);
   border-radius: 999px;
-  background: var(--lavender);
-  font-size: 1.05rem;
 }
- 
-/* right column: bio + callout text RX */
-.hero-bio {
-  margin: 0 0 1rem;
-  font-size: clamp(1.1rem, 1.9vw, 1.4rem);
-  line-height: 1.5;
+
+/* Day number + month, side by side, lined up along the bottom of the text VN */
+.date { display: flex; align-items: baseline; gap: 0.35vw; }
+
+.day {
+  font-family: var(--font-display); 
+  /* min() picks the smaller of the two values, so the number shrinks on
+     short screens and the cards never push the page past the screen. VN */
+  font-size: min(4.5vw, 9.5vh);
+  line-height: 1.1;
 }
- 
-/* text with lavendar background RX */
-.callout {
-  padding: 0.75rem 1rem 1.25rem;
-  background: var(--lavender);
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  line-height: 1.5;
+
+.month {
+  font-size: min(1.6vw, 3vh);
+  text-transform: uppercase; /* shows "Oct" as "OCT" VN */
 }
- 
-.callout p { margin: 0 0 0.5rem; }
-.callout ul { margin: 0; padding-left: 2rem; }
-.callout a { color: var(--ink); text-decoration: underline; }
- 
-/* quote that runs along the bottom on the webpage RX */
-.hero-quote {
-  margin: 2rem 0 0;
+
+.event {
   text-align: center;
-  color: var(--purple);
-  font-size: clamp(1.25rem, 2.4vw, 1.9rem);
+  font-size: min(1.75vw, 3.3vh);
   font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Right column: banner image above the title and tagline VN */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  min-height: 0;
+  padding-top: 4vh;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: 32vh;
+  object-fit: cover;           /* crops instead of stretching if the shape differs VN */
+}
+
+/* Title + tagline block. The auto left margin pushes it toward the right VN */
+.intro-text {
+  width: 34vw;
+  margin: 0 2vw 0 auto;
+  text-align: center;
+}
+
+.intro-text h1 {
+  margin: 0;
+  color: var(--brick);
+  font-family: var(--font-display);
+  font-weight: 400;          
+  font-size: clamp(2.5rem, 5.3vw, 6.5rem);
+  line-height: 1.1;
+  white-space: nowrap;         /* keep "Code and Power" on one line VN */
+}
+
+.tagline {
+  margin: 1.5vh 0 0;
+  font-size: clamp(1.1rem, 2vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* --- footer credits bar --- */
+.credits {
+  background: var(--brick);    /* the red bar across the bottom VN */
+  color: #fff;
+  padding: 2vh 2rem;
+}
+
+.credits ul {
+  display: flex;
+  justify-content: center;     /* center the names in the bar VN */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(0.9rem, 1.2vw, 1.6rem);
+  font-weight: 700;
+}
+
+/* Referenced Stack Overflow: Adds a "|" before every name except the first. "li + li" means "an li
+   that comes right after another li". This way, we don't need separate bars typed in VN */
+.credits li + li::before {
+  content: "|";
+  margin: 0 2vw;
 }
