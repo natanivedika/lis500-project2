@@ -4,72 +4,123 @@
   <meta charset="UTF-8">
   <title>Resource Guide - Code and Power</title>
 
-  <!-- Following instructions from Stack Overflow, this part of the code links to google fonts, so we can use a font we like MS-->
+  <!-- These three lines connect and load Google Fonts, so we can use the fonts we like (used Stack Overflow as reference) VN-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="page">
 
-  <header class="site-header">
+
+<body class="guide">
+
+     <!-- This is the navbar, and it will stay the same across all pages of the website. It links to the 3 required pages plus the splash page VN-->
+  <header class="splash-nav">
     <nav aria-label="Main navigation">
-
-        <!-- This part of the code is the navigation bar. It contains links to the three required pages, so this part stays the same MS.-->
-      <ul class="nav-links">
-        <li><a href="resource-guide.html" aria-current="page">Resource Guide</a></li>
-        <li><a href="tech-heroes.html">Tech Heroes</a></li>
-        <li><a href="about-us.html">About Us</a></li>
+      <ul>
+        <li class="nav-home">
+          <a href="index.html" aria-current="page">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="resource-guide.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Resource Guide</span>
+          </a>
+        </li>
+        <li>
+          <a href="tech-heroes.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Tech Heroes</span>
+          </a>
+        </li>
+        <li>
+          <a href="about-us.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>About Us</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="content">
 
-    <h1 class="page-title"><span>Intersectionality and Implicit Bias: A Guide</span></h1>
+  <!-- page title VN -->
+  <header class="guide-header">
+    <h1>Intersectionality and Implicit Bias: A Guide</h1>
+  </header>
 
-    <!-- This is the 1st block/section of the page. It contains information about the guide and definitions for key terms MS-->
-    <section class="block">
-      <p><strong>About this guide:</strong> The purpose of this guide is to discuss topics like intersectionality and implicit bias by examining how identity, power structures, and personal views shape experiences within technology and computing industries. By defining societal frameworks and key terms, this guide provides foundational knowledge to help recognize systemic barriers, question stereotypes, and create true inclusion.</p>
+  <main class="guide-main">
 
-      <p><strong>Intersectionality</strong> is an analytical tool coined by Kimberlé Crenshaw, and it’s used to examine how multiple identities (like race, gender, class, disability, etc.) intersect and interact. Rather than viewing discrimination through individual categories, intersectionality highlights how these identities are connected and create unique experiences for people.</p>
+    <!-- The first paragraph is centered (class="lead"); the three definitions below it are left-aligned VN -->
+    <p class="lead">The purpose of this guide is to discuss topics like intersectionality and implicit bias by examining how identity, power structures, and personal views shape experiences within technology and computing industries. By defining societal frameworks and key terms, this guide provides foundational knowledge to help recognize systemic barriers, question stereotypes, and create true inclusion.</p>
 
-      <p><strong>Implicit Bias</strong> refers to automatic associations that affect our thinking or decisions without conscious awareness, and it is usually formed through social conditioning or environmental exposure.</p>
+    <!-- <strong> makes the key term bold VN -->
+    <p><strong>Intersectionality</strong> is an analytical tool coined by Kimberlé Crenshaw, and it’s used to examine how multiple identities (like race, gender, class, disability, etc.) intersect and interact. Rather than viewing discrimination through individual categories, intersectionality highlights how these identities are connected and create unique experiences for people.</p>
 
-      <p><strong>The Implicit Bias Test (IBT)</strong> is a tool designed to measure the strength of automatic mental associations between concepts and stereotypes. By tracking split-second reaction times during sorting tasks, the test reveals subconscious preferences that individuals may have.</p>
-    </section>
+    <p><strong>Implicit Bias</strong> refers to automatic associations that affect our thinking or decisions without conscious awareness, and it is usually formed through social conditioning or environmental exposure.</p>
 
-    <section class="block divided" id="reflection">
-      <h2>Reflection on Intersectionality, Implicit Bias, and IBT</h2>
+    <p><strong>The Implicit Bias Test (IBT)</strong> is a tool designed to measure the strength of automatic mental associations between concepts and stereotypes. By tracking split-second reaction times during sorting tasks, the test reveals subconscious preferences that individuals may have.</p>
+
+
+    <!-- This is all one section (for Reflection) so the red border wraps the heading,
+         all the reflection text, the video, and the test link together.
+         aria-labelledby connects the section to its heading for screen readers MS -->
+    <section class="reflection" aria-labelledby="reflection-title">
+
+      <h2 id="reflection-title">Reflection on Intersectionality, Implicit Bias, and IBT</h2>
 
       <p>Technology has the ability to influence and redefine nearly every part of modern life, from culture and commerce to climate action, healthcare, and communication. In just the past few years, its growth has accelerated dramatically, changing how we find, share, and consume information every day. Because technology is integrated so deeply into our daily lives, it matters who is building it and whose perspectives are shaping it. This is why conversations about intersectionality and true diversity belong at the center of the tech space. When the field welcomes and values a range of identities, it creates space for stronger innovation, less bias, and more inclusive workplaces.</p>
 
-      <p>When we look at tech through just one lens (like gender OR race OR disability), we miss the bigger picture of how our full identities intersect with one another. Algorithms and software carry the hidden assumptions and biases of the people who write the code. When teams building these tools all consist of people with the same backgrounds and experiences, we end up with flaws that have real effects. For example, facial recognition that misidentifies people of color, voice assistants that can’t pick up different accents, or apps that ignore accessibility. </p>
+      <!-- Red label line (class="red-label") MS -->
+      <p class="red-label">Watch Kimberlé Crenshaw’s TED talk on the topic of Intersectionality:</p>
+
+      <!-- this section allows the youtube video to be embedded onto the website. the iframe code is from YouTube itself MS -->
+      <div class="video-embed">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/akOe5-UsQ2o?si=4AYRg2pWZ-o5j0nn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <p>When we look at tech through just one lens (like gender OR race OR disability), we miss the bigger picture of how our full identities intersect with one another. Algorithms and software carry the hidden assumptions and biases of the people who write the code. When teams building these tools all consist of people with the same backgrounds and experiences, we end up with flaws that have real effects. For example, facial recognition that misidentifies people of color, voice assistants that can’t pick up different accents, or apps that ignore accessibility.</p>
+
+      <!-- Referenced Stack Overflow: &amp = "&" character in HTML MS -->
+      <p>On Implicit Bias, we described it as something “sneaky” because it happens when we aren’t even paying attention. None of us wake up in the morning planning to be biased, but because these shortcuts run on autopilot, they influence our daily choices, assumptions, and interactions without us realizing it. You can see this play out everywhere, especially in high-impact fields like tech. A lot of people in tech genuinely care about diversity &amp; inclusion and most want everyone to have a seat at the table. In reality, quiet assumptions can still sneak into who gets hired, who gets promoted, and even how products and software are designed. Wanting to do the right thing isn’t enough – we actually have to check our thinking and hold ourselves accountable for the real-world impact of our actions.</p>
+
+      <p>So, taking implicit bias tests can be an eye-opening starting point because it forces you to look at quick, split-second associations you might not know you hard. But it’s super important not to treat your results like a final, unchangeable label on who you are. We believe that since the test mostly measures biases based on response times and reaction speed, it is not about getting a “perfect” score on the test. Recognizing these automatic associations is just the first step in creating an inclusive environment around us.</p>
+
+      <!-- Link to Harvard's IAT, and the link opens in a new tab MS -->
+      <p><span class="red-label">Take Harvard’s Implicit Association Test:</span> <a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank">Harvard Implicit Association Test</a></p>
     </section>
 
-    <section class="block divided" id="resources">
-      <h2>Resources</h2>
+    
 
+
+    <!-- These are the resources from class readings RX -->
+    <section class="resources" aria-labelledby="resources-title">
+      <h2 id="resources-title">Resources</h2>
+
+      <!-- A list, because these are three similar items. We use our stylesheet to remove the bullets and
+           put a book icon beside each one RX -->
       <ul class="resource-list">
-        <li>Class Readings:
-          <ul>
-            <!-- Article embedded onto the webpage. Adding the _blank target opens the pdf file in a new tab MS -->
-            <li><a href="assets/Indigenous Circuits - CHM _UG.pdf" target="_blank"> Nakamura - Indigenous Circuits</a>
-            </li>
-            
-            <!-- Article embedded onto the webpage. Adding the _blank target opens the pdf file in a new tab MS -->
-            <li><a href="assets/FFFFFF Diversity – This is Hard. – Medium.pdf" target="_blank"> Joy - #FFFFFF diversity.</a> 
-            </li>
-          </ul>
+
+        <li>
+          <!-- alt="" because the icon is decoration; the text next to it says everything RX-->
+          <img class="book" src="assets/book-icon_img.png" alt="">
+          <p><a href="assets/Indigenous Circuits - CHM _UG.pdf" target="_blank">Nakamura - Indigenous Circuits</a>: Explores the forgotten history of Navajo women employed by Fairchild Semiconductor from 1965 - 1975.</p>
         </li>
-        
-        <li>Interactive resources:
-          <ul>
-            <!-- This section links to the video and IBT from Project #1 MS-->
-            <li><a href="https://youtu.be/akOe5-UsQ2o?si=W7UyPD75di5aSlA5" target="_blank"> The urgency of Intersectionality | Kimberlé Crenshaw - TED Talk</a> </li>
-            <li><a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank"> Harvard's Implicit Bias Test</a></li>
-          </ul>
+
+        <li>
+          <img class="book" src="assets/book-icon_img.png" alt="">
+          <p><a href="assets/FFFFFF Diversity – This is Hard. – Medium.pdf" target="_blank">Joy - #FFFFFF</a>: Critique on the tech industry’s corporate diversity initiatives for practicing “colorless” diversity.</p>
         </li>
+
+        <li>
+          <img class="book" src="assets/book-icon_img.png" alt="">
+          <p><a href="assets/DiAngelo - Why is Whitness so.pdf" target="_blank">DiAngelo - White Fragility…</a>: Argument on systemic racism, how it goes beyond individual prejudice, and how it’s embedded into societal structures.</p>
+        </li>
+
       </ul>
     </section>
 
