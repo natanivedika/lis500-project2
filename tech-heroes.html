@@ -2,68 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tech Hero - Code and Power</title>
+  <title>Tech Heroes - Code and Power</title>
 
-  <!-- Following instructions from Stack Overflow, this part of the code links to google fonts, so we can use a font we like RX-->
+  <!-- These three lines connect and load Google Fonts, so we can use the fonts we like (used Stack Overflow as reference) VN-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="page tech-hero">
+<!-- class="guide" tells our stylesheet to apply the same background as other pages (resource guide page for example) RX -->
+<body class="guide">
 
-  <header class="site-header">
+   <!-- This is the navbar, and it will stay the same across all pages of the website. It links to the 3 required pages plus the splash page VN-->
+   <header class="splash-nav">
     <nav aria-label="Main navigation">
-      <ul class="nav-links">
-        <li><a href="resource-guide.html">Resource Guide</a></li>
-        <li><a href="tech-heroes.html" aria-current="page">Tech Heroes</a></li>
-        <li><a href="about-us.html">About Us</a></li>
+      <ul>
+        <li class="nav-home">
+          <a href="index.html" aria-current="page">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="resource-guide.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Resource Guide</span>
+          </a>
+        </li>
+        <li>
+          <a href="tech-heroes.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Tech Heroes</span>
+          </a>
+        </li>
+        <li>
+          <a href="about-us.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>About Us</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="content wide">
+  <!-- page title, this is same style as resource guide page, so used the same style rule RX -->
+  <header class="guide-header">
+    <h1>Our Tech Heroes</h1>
+  </header>
 
-    <h1 class="page-title"><span>Tech Hero</span></h1>
+  <main class="heroes-main">
 
-    <section class="hero-profile">
+    <!-- Each tech hero is one <section>: a red heading, then a rounded red box with the
+         photo on the left and the text on the right. RX -->
 
-      <aside class="hero-card">
+    <!--  MONISHA'S TECH HERO RX -->
+    <section class="hero-entry" aria-labelledby="monisha-hero">
+      <h2 id="monisha-hero">Monisha’s Tech Hero</h2>
 
-        <!-- Kimberly Bryant's profile pic, with some relevant lavendar tags underneath RX-->
-        <img class="hero-photo" src="assets/KB_img.webp" alt="Kimberly Bryant Profile Pic">
-        <h2 class="hero-name">Kimberly Bryant</h2>
-        <ul class="tags">
+      <div class="hero-box">
+        <img class="hero-photo" src="assets/JB_img.png" alt="Portrait of Joy Buolamwini">
 
-            <!-- These are the "tags" that showcase some titles Bryant holds RX -->
-          <li>Engineer</li>
-          <li>Black Girls Code founder</li>
-          <li>Advocate for Equity in Tech</li>
-        </ul>
-      </aside>
+        <div class="hero-text">
+          <p>Joy Buolamwini is my tech hero. She is the creator of the Algorithmic Justice League. Her work focuses on promoting fairer technologies and uncovering biases in artificial intelligence. She discovered that her face was not recognized by facial identification software while working on a project at MIT, unless she put on a white mask. She was inspired by this, to look into how these systems performed for individuals with varying skin tones. Her research showed how a person's gender and skin tone might affect how well technology works. </p>
 
-      <div class="hero-text">
-
-        <!-- This paragraph talks a little bit about who Kimberly Bryant is and why her work matters RX-->
-        <p class="hero-bio">Kimberly Bryant is an engineer and the founder of <strong>Black Girls Code</strong>, a nonproft organization created to expand access to technology education for black girls and other underrepresented youth. Bryant noticed that the lack of diversity in technology was not simply about interest or ability: access, representation, mentorship, and a sense of belonging shaped who feels that they have a place in the tech industry. Instead of only pointing out the problem, Bryant helped create a space where young people could learn coding, computer science, and other technical skills while looking up to creators and leaders with a diverse background.</p>
-
-        <!-- This is the section with the lavendar background. It talks about Bryant's work and links to some resources RX -->
-        <div class="callout">
-          <p>Bryant’s work challenges the idea that increasing diversity means simply bringing more people into the room. She asks who gets access to knowledge, opportunities, networks, and power. Black Girls Code reports that it has reached more than <strong>53,000</strong> learners through live and virtual workshops since 2011.</p>
-
-          <!-- I'm using an unordered list (bullet points) to list the two resources (link to website and youtube video) RX -->
-          <ul>
-            <li>Visit: <a href="https://www.wearebgc.org/" target="_blank">Black Girls Code</a></li>
-            <li>Watch: <a href="https://youtu.be/TJ-m47CxAI0?si=Nuhg4eic1Nt1GMGd" target="_blank">Kimberly Bryant’s TED Talk</a></li>
-          </ul>
+          <!-- The two links sit side by side under the paragraph (class="hero-links") RX -->
+          <p class="hero-links">
+            <a href="https://www.youtube.com/watch?v=6n3zvya2lHs" target="_blank">Watch Buolamwini's video on MIT Media Lab</a>
+            <a href="https://www.ajl.org/" target="_blank">Visit Algorithmic Justice League</a>
+          </p>
         </div>
       </div>
-
     </section>
 
-    <!-- This quote runs along the bottom of the page RX-->
-    <blockquote class="hero-quote">“Technology is more powerful when everyone can create it.”</blockquote>
+
+    <!--  RAY'S TECH HERO RX -->
+    <section class="hero-entry" aria-labelledby="ray-hero">
+      <h2 id="ray-hero">Ray’s Tech Hero</h2>
+
+      <div class="hero-box">
+        <img class="hero-photo" src="assets/KB_img.webp" alt="Portrait of Kimberly Bryant">
+
+        <div class="hero-text">
+          <p>Kimberly Bryant is an engineer and the founder of <strong>Black Girls Code</strong>, a nonprofit organization created to expand access to technology education for black girls and other underrepresented youth. Bryant noticed that the lack of diversity in technology was not simply about interest or ability: access, representation, mentorship, and a sense of belonging shaped who feels that they have a place in the tech industry. Instead of only pointing out the problem, Bryant helped create a space where young people could learn coding, computer science, and other technical skills while looking up to creators and leaders with a diverse background.</p>
+
+          <!-- The two links sit side by side under the paragraph (class="hero-links") RX -->
+          <p class="hero-links">
+            <a href="https://youtu.be/TJ-m47CxAI0?si=2HaY4VMPmJfxBJLw" target="_blank">Watch Bryant’s TED Talk</a>
+            <a href="https://www.wearebgc.org/" target="_blank">Visit Black Girls Code</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!--  VEDIKA'S TECH HERO RX -->
+    <section class="hero-entry" aria-labelledby="vedika-hero">
+      <h2 id="vedika-hero">Vedika’s Tech Hero</h2>
+
+      <div class="hero-box">
+        <img class="hero-photo" src="assets/RT_img.jpg" alt="Portrait of Ridhi Tariyal">
+
+        <div class="hero-text">
+          <p>Ridhi Tariyal is an engineer, scientist, businesswoman, and writer. She co-founded <strong>NextGen Jane</strong> as an effort advance women’s health through biotechnology. Her work consists of non-invasive diagnostics for women’s reproductive health conditions, especially endometriosis. NextGen Jane developed a platform (around smart tampon technology) to capture shedding uterine lining tissue, which, according to research, is a powerful diagnostic asset. Her team aims to enable early detection and targeted treatments for reproductive diseases by genomic profiling, RNA sequencing, and molecular biomarker identification.</p>
+
+          <!-- The two links sit side by side under the paragraph (class="hero-links") RX -->
+          <p class="hero-links">
+            <a href="https://youtu.be/Z9aDQa99Qaw?si=FTRuhg1W45fw5g3U" target="_blank">Watch Tariyal’s video on NextGen Jane</a>
+            <a href="https://www.nextgenjane.com/" target="_blank">Visit NextGen Jane</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
   </main>
 

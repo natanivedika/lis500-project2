@@ -307,6 +307,57 @@ a { color: inherit; }
   }
 
 /* ------------- This section will be for the tech heroes page VN ------------------ */
+/* The page background, title row, and base text size come from the shared
+   rules at the top (".guide, .heroes"). Below are the parts
+   that are only on this page. RX */
+ 
+/* Same side margins as the Resource Guide: content reaches the screen edges RX */
+.heroes-main { padding: 3vh 3vw 6vh; }
+ 
+/* One hero = red heading + rounded box. The top margin on every entry after
+   the first is the gap that keeps the three stacked boxes distinct. RX */
+.hero-entry + .hero-entry { margin-top: 3.5rem; }
+ 
+.hero-entry h2 {
+  margin: 0 0 0.3rem;
+  padding-left: 2vw;  /* lines the heading up just inside the box's rounded corner RX */
+  color: var(--brick);
+  font-size: clamp(1.4rem, 1.5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+ 
+/* The rounded red box. Two columns: photo on the left, text on the right.
+   The photo column is 15% of the screen width, but never smaller than 140px
+   or larger than 250px RX */
+.hero-box {
+  display: grid;
+  grid-template-columns: clamp(140px, 15vw, 250px) 1fr;
+  column-gap: 4vw;
+  align-items: center;  /* centers the photo vertically against the text RX */
+  padding: 1.5rem 2vw;
+  border: 2px solid var(--brick);
+  border-radius: 2.5rem;       
+}
+ 
+.hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 17 / 20;  /* keeps every photo frame the same shape RX */
+  object-fit: cover;   /* fills the frame by cropping instead of stretching RX */
+}
+ 
+.hero-text p { margin: 0 0 0.6em; }
+ 
+/* The two links under each bio: bold, underlined, and spread evenly across the row. RX */
+.hero-text .hero-links {
+  display: flex;
+  flex-wrap: wrap;             /* on narrow screens the links drop to separate lines RX */
+  justify-content: space-evenly;
+  gap: 0.5rem 2rem;
+  margin: 0.8rem 0 0;
+  font-weight: 700;
+}
 
 
 /* ---------- This is the About Us page (about-us.html) VN ---------- */
