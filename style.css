@@ -306,6 +306,43 @@ a { color: inherit; }
     margin-top: 0.15em;  /* nudges the icon down to line up with the first line of text MS */
   }
 
+/* --------- This is the "Questions to think about..." section (between the reflection box and Resources) VN ------ */
+.questions {
+  margin: 3.5rem 0;
+  text-align: center;  /* all the questions are centered VN */
+  font-size: 1.50rem;      
+}
+ 
+/* The "Questions to think about..." heading style VN */
+.questions h2 {
+  margin: 0 0 0.7em;
+  color: var(--brick);
+  font-size: 1.1em;
+  font-weight: 700;
+  text-decoration: underline;
+}
+ 
+.questions p { margin: 0 0 1.2em; } /* margin of this div/section VN */
+ 
+/* The bottom row: picture -> last two questions -> picture.
+   Each picture column is a share of the screen width, with a minimum and maximum size VN */
+.questions-row {
+  display: grid;
+  grid-template-columns: clamp(110px, 21vw, 340px) 1fr clamp(100px, 15vw, 250px);
+  column-gap: 2vw;
+}
+ 
+.questions-text { align-self: start; } /* text sits at the top of the row VN */
+.questions-text p:last-child { margin-bottom: 0; }
+ 
+.q-brain,
+.q-thinker {
+  display: block;
+  width: 100%;
+  height: auto;  /* keeps each picture's proportions VN */
+  align-self: end;  /* pictures sit at the bottom of the row VN */
+}
+
 /* ------------- This section will be for the tech heroes page VN ------------------ */
 /* The page background, title row, and base text size come from the shared
    rules at the top (".guide, .heroes"). Below are the parts
