@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resource Guide - Code and Power</title>
+
+  <!-- These three lines connect and load Google Fonts, so we can use the fonts we like (used Stack Overflow as reference) VN-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- use the same class="guide" to apply the same background as other pages (resource guide page for example) VN -->
+<body class="guide">
+
+   <!-- This is the navbar, and it will stay the same across all pages of the website. It links to the 3 required pages plus the splash page VN-->
+   <header class="splash-nav">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li class="nav-home">
+          <a href="index.html" aria-current="page">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="resource-guide.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Resource Guide</span>
+          </a>
+        </li>
+        <li>
+          <a href="tech-heroes.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>Tech Heroes</span>
+          </a>
+        </li>
+        <li>
+            <a href="teachable-machine.html">
+              <img class="folder" src="assets/folder-icon_img.png" alt="">
+              <span>Leaf Classification Model</span>
+            </a>
+        </li>
+        <li>
+          <a href="about-us.html">
+            <img class="folder" src="assets/folder-icon_img.png" alt="">
+            <span>About Us</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- page title, this uses the same style rule as resource guide page VN -->
+  <header class="guide-header">
+    <h1>Leaf Classification Model</h1>
+  </header>
+
+  <main class="tm-main">
+
+    <!-- The page is four blocks stacked in order. The first three are "sections" with
+         text on one side and pictures on the other (class="flip" swaps the sides).
+         The last block is the red Lessons Learned box. VN -->
+
+    <!-- PROJECT OBJECTIVES (text left, picture right) VN -->
+    <section class="tm-section" aria-labelledby="objectives-title">
+      <div class="tm-text">
+        <h2 id="objectives-title">Project Objectives</h2>
+        <!-- class="term" underlines the label at the start of each bullet VN -->
+        <ul>
+          <li><span class="term">Core Goal</span>: Develop an image classification model using Google’s Teachable Machine that accurately categorizes leaves by their physical appearance/condition.</li>
+          <li><span class="term">3 Target Classes</span>: We trained the model to distinguish between Healthy (intact, green leaves), Damaged (minor tears, holes, or discoloration), and Obstructed (fully crushed, blackened, or decayed).</li>
+          <li><span class="term">Real-World Relevance</span>: We wanted to demonstrate how accessible machine learning tools can automate plant health monitoring, early disease detection, or agricultural sorting.</li>
+        </ul>
+      </div>
+
+      <div class="tm-media">
+        <img src="assets/leaves.jpg" alt="Close-up of fallen leaves in yellow, orange, and brown, some with dark spots">
+      </div>
+    </section>
+
+
+    <!-- PROJECT SCOPE (pictures left, text right) VN -->
+    <!-- class="flip" puts the pictures on the left. The text still comes first in the HTML
+         (good for screen readers and phones); the CSS moves the pictures visually. VN -->
+    <section class="tm-section flip" aria-labelledby="scope-title">
+      <div class="tm-text">
+        <h2 id="scope-title">Project Scope</h2>
+        
+        <!-- class="justify" lines up the text on both the left and right edges VN -->
+        <ul class="justify">
+          <li><span class="term">Dataset</span>: A collection of 300 total images, balanced evenly with 100 images per class.</li>
+          <li><span class="term">Team Collaboration</span>:The 3 of us captured 100 photos dedicated to a leaf category.</li>
+          <li><span class="term">Model Boundaries</span>: focused on visual surface-level conditions (structural integrity and color) across common local leaves under varied lighting and backgrounds, rather than identifying specific botanical species or internal plant diseases.</li>
+        </ul>
+      </div>
+
+      <div class="tm-media">
+        <div class="tm-collage">
+          <img class="pic-wide" src="assets/obstructed-leaves.jpg" alt="Pile of dark, crumpled leaves">
+          <img class="pic-side" src="assets/damaged-leaves.jpg" alt="Yellow and green leaves against a blurred background">
+          <img class="pic-tall" src="assets/healthy-leaves.jpg" alt="Bright green leaves against a blue sky">
+        </div>
+      </div>
+    </section>
+
+
+    <!--  PROCESS (text left, screenshots right) VN -->
+    <section class="tm-section" aria-labelledby="process-title">
+      <div class="tm-text">
+        <h2 id="process-title">Process</h2>
+        <!-- <ol> for a numbered list VN -->
+        <ol>
+          <li><span class="term">Planning &amp; Task Division</span>: We defined clear visual criteria for each of the 3 classes and assigned 2 categories per team member to streamline data collection.</li>
+          <li><span class="term">Data Collection</span>: We captured 100 photos per category using different leaf species, angles, lighting conditions, and backgrounds to prevent the model from memorizing a single surface.</li>
+          <li><span class="term">Model Training</span>: We uploaded the organized image folders into Teachable Machine’s Standard Image Model and trained the classifier.</li>
+          <li><span class="term">Testing &amp; Validation</span>: We evaluated the trained model using live webcam input and brand-new test images unseen during training to check accuracy and catch misclassifications.</li>
+        </ol>
+      </div>
+
+      <!-- class="tm-media--shots" keeps the two screenshots smaller than the big photos above VN -->
+      <div class="tm-media tm-media--shots">
+        <img src="assets/leaf-folders-img.png" alt="Folder structure for the three image classes named damaged, healthy, and obstructed">
+        <img src="assets/train-model-img.png" alt="The Train Model screenshot from Teachable Machine website">
+      </div>
+    </section>
+
+
+    <!--  LESSONS LEARNED  -->
+    <!-- One section, so the rounded red border (set in the CSS) wraps the heading and the paragraph VN -->
+    <section class="tm-lessons" aria-labelledby="lessons-title">
+      <h2 id="lessons-title">Lessons Learned</h2>
+      <!-- class="key-term" makes the three important phrases red and underlined VN -->
+      <p>Throughout this project, we learned how <span class="key-term">data diversity</span> is more important than quantity. Having varied backgrounds, angles, and lighting is just as important as the number of photos. Otherwise, the AI learns to recognize the table or background instead of the leaf itself. We also learned the importance of <span class="key-term">class balance</span>. Keeping an equal 100-100-100 split prevented the model from becoming biased toward guessing 1 dominant category. Lastly, we also learned how visually overlapping cases (like a leaf with heavy brown spots vs. a completely obstructed/decayed leaf) showed how important strict, consistent <span class="key-term">labeling criteria</span> are during data collection.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>
