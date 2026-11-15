@@ -396,6 +396,105 @@ a { color: inherit; }
   font-weight: 700;
 }
 
+/* ---------- This section is for the Teachable Machines project page (teachable-machine.html) VN ---------- */
+.tm-main { padding: 2vh 3vw 6vh; }
+
+/* One section = text on one side, pictures on the other. Two columns: the
+   text column is 1.5 parts wide and the picture column is 1 part ("fr" is a
+   share of the available space). VN */
+.tm-section {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  column-gap: 5vw;
+  align-items: center;         /* centers the text and the pictures against each other VN */
+}
+
+/* The space between one section and the next. VN */
+.tm-section + .tm-section { margin-top: clamp(2.5rem, 8vh, 5rem); }
+
+/* "flip" puts the pictures on the left. The HTML keeps the text first, so
+   order: -1 is what moves the pictures to the front visually. VN */
+.tm-section.flip { grid-template-columns: 1fr 1.6fr; }
+.tm-section.flip .tm-media { order: -1; }
+
+/* --- text: headings, bullet lists, numbered list VN --- */
+.tm-text h2,
+.tm-lessons h2 {
+  margin: 0 0 0.35em;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tm-text ul,
+.tm-text ol {
+  margin: 0;
+  padding-left: 1.6em;         /* room for the bullets or numbers VN */
+}
+
+.tm-text li { margin-bottom: 0.15em; }
+
+.term { text-decoration: underline; }   /* the label at the start of each bullet VN */
+
+.justify { text-align: justify; }       /* straight edges on both left and right VN */
+
+/* --- pictures --- VN */
+.tm-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+/* ">" means direct children only, so this doesn't touch the collage photos. VN */
+.tm-media > img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;                /* keeps each picture's proportions VN */
+}
+
+/* The two Teachable Machine screenshots are smaller than the big leaf photo. VN */
+.tm-media--shots > img { max-width: clamp(180px, 21vw, 320px); }
+
+/* Three photos arranged as a collage: a wide one top-left, a tall one under
+   it (nudged right), and one on the right side that starts a bit lower. VN */
+.tm-collage {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.5vw;
+  width: 100%;
+  max-width: 520px;
+  align-items: start;
+}
+
+.tm-collage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;           /* crops to the frame instead of stretching VN */
+}
+.tm-collage .pic-tall { grid-column: 1; grid-row: 2; aspect-ratio: 2 / 3; width: 90%; margin-left: 10%; }
+.pic-wide { grid-column: 1; grid-row: 1; aspect-ratio: 3 / 2; }
+.pic-side { grid-column: 2; grid-row: 1 / span 2; aspect-ratio: 2 / 3; margin-top: 6%; }
+
+/* --- Lessons Learned box: one rounded red border around the heading and paragraph VN --- */
+.tm-lessons {
+  margin-top: clamp(2.5rem, 8vh, 5rem);
+  padding: 1rem 2vw 1.25rem;
+  border: 2px solid var(--brick);
+  border-radius: 2.5rem;       /* rounded corners VN */
+  text-align: center;
+}
+
+.tm-lessons p { margin: 0; }
+
+/* The three highlighted phrases inside the Lessons Learned paragraph. VN */
+.key-term {
+  color: var(--brick);
+  text-decoration: underline;
+}
+
 
 /* ---------- This is the About Us page (about-us.html) VN ---------- */
 /* The page background, title, and base text size come from the shared rules
