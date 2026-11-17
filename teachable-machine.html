@@ -93,7 +93,7 @@
         <ul class="justify">
           <li><span class="term">Dataset</span>: A collection of 300 total images, balanced evenly with 100 images per class.</li>
           <li><span class="term">Team Collaboration</span>:The 3 of us captured 100 photos dedicated to a leaf category.</li>
-          <li><span class="term">Model Boundaries</span>: focused on visual surface-level conditions (structural integrity and color) across common local leaves under varied lighting and backgrounds, rather than identifying specific botanical species or internal plant diseases.</li>
+          <li><span class="term">Model Boundaries</span>: We focused on visual surface-level conditions (structural integrity and color) across common local leaves under varied lighting and backgrounds, rather than identifying specific botanical species or internal plant diseases. In Unmasking AI, Buolamwini explains how AI systems reflect the priorities, blind spots, and environments of the people who build them. In an effort to avoid these blind spots and ensure diversity within the dataset, each team member was responsible for 2 of the categories (evenly split, 50-50). This prevented our own individual environments (like one person’s specific carpet or lighting) from becoming an unintended shortcut for the algorithm.</li>
         </ul>
       </div>
 
@@ -114,9 +114,9 @@
         <!-- <ol> for a numbered list VN -->
         <ol>
           <li><span class="term">Planning &amp; Task Division</span>: We defined clear visual criteria for each of the 3 classes and assigned 2 categories per team member to streamline data collection.</li>
-          <li><span class="term">Data Collection</span>: We captured 100 photos per category using different leaf species, angles, lighting conditions, and backgrounds to prevent the model from memorizing a single surface.</li>
+          <li><span class="term">Data Collection</span>: In the readings, Buolamwini also mentions that AI models fail when trained on narrow or imbalanced datasets. So, capturing 100 photos per category using different leaf species, angles, lighting conditions, and backgrounds prevents the model from memorizing a single surface.</li>
           <li><span class="term">Model Training</span>: We uploaded the organized image folders into Teachable Machine’s Standard Image Model and trained the classifier.</li>
-          <li><span class="term">Testing &amp; Validation</span>: We evaluated the trained model using live webcam input and brand-new test images unseen during training to check accuracy and catch misclassifications.</li>
+          <li><span class="term">Testing &amp; Validation</span>: We evaluated the trained model using both live webcam input and file upload. We used brand-new test images unseen during training to check accuracy and catch misclassifications.</li>
         </ol>
       </div>
 
@@ -133,7 +133,7 @@
     <section class="tm-lessons" aria-labelledby="lessons-title">
       <h2 id="lessons-title">Lessons Learned</h2>
       <!-- class="key-term" makes the three important phrases red and underlined VN -->
-      <p>Throughout this project, we learned how <span class="key-term">data diversity</span> is more important than quantity. Having varied backgrounds, angles, and lighting is just as important as the number of photos. Otherwise, the AI learns to recognize the table or background instead of the leaf itself. We also learned the importance of <span class="key-term">class balance</span>. Keeping an equal 100-100-100 split prevented the model from becoming biased toward guessing 1 dominant category. Lastly, we also learned how visually overlapping cases (like a leaf with heavy brown spots vs. a completely obstructed/decayed leaf) showed how important strict, consistent <span class="key-term">labeling criteria</span> are during data collection.</p>
+      <p>Throughout this project, we learned how <span class="key-term">data diversity</span> is more important than quantity. Having varied backgrounds, angles, and lighting is just as important as the number of photos. Otherwise, the AI learns to recognize the table or background instead of the leaf itself. We also learned the importance of <span class="key-term">class balance</span>. Keeping an equal 100-100-100 split prevented the model from becoming biased toward guessing 1 dominant category. Lastly, we also learned how visually overlapping cases (like a leaf with heavy brown spots vs. a completely obstructed/decayed leaf) showed how important strict, consistent <span class="key-term">labeling criteria</span> are during data collection. Buolamwini challenges the idea that AI is an objective, all-knowing “black box” and emphasizes that every algorithm reflects human choices (what gets labeled, what gets left out, etc.). We acknowledge that our model does not act independently in making decisions and any confusion the model has on borderline leaves/edge cases directly reflects our group’s definitions (what is considered Damaged vs. Obstructed) and sample choices that we agreed upon during data collection. Our biggest takeaway as a group aligns with a central theme of Unmasking AI: machine learning models are not neutral or foolproof. Their accuracy and fairness depend entirely on the intentionality and care humans put into creating the training data.</p>
     </section>
 
   </main>
