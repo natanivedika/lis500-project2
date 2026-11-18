@@ -410,7 +410,8 @@ a { color: inherit; }
 }
 
 /* The space between one section and the next. VN */
-.tm-section + .tm-section { margin-top: clamp(2.5rem, 8vh, 5rem); }
+.tm-section + .tm-section,
+.tm-lessons + .tm-section { margin-top: clamp(2.5rem, 8vh, 5rem); }
 
 /* "flip" puts the pictures on the left. The HTML keeps the text first, so
    order: -1 is what moves the pictures to the front visually. VN */
@@ -419,7 +420,8 @@ a { color: inherit; }
 
 /* --- text: headings, bullet lists, numbered list VN --- */
 .tm-text h2,
-.tm-lessons h2 {
+.tm-lessons h2,
+.tm-try h2 {
   margin: 0 0 0.35em;
   font-size: 1.15em;
   font-weight: 700;
@@ -494,6 +496,17 @@ a { color: inherit; }
   color: var(--brick);
   text-decoration: underline;
 }
+  
+  /* --- "Link to try our model!" block: left-aligned text under the Demo Walkthrough VN --- */
+  .tm-try { margin-top: clamp(1.5rem, 5vh, 3rem); }
+  
+  .tm-try p { margin: 0 0 1em; }
+  .tm-try p:last-child { margin-bottom: 0; }
+  
+  .tm-try a {
+    text-decoration: underline;
+    overflow-wrap: anywhere;     /* lets the long web address wrap on narrow screens VN */
+  }
 
 
 /* ---------- This is the About Us page (about-us.html) VN ---------- */

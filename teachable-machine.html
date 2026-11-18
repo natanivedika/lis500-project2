@@ -136,6 +136,36 @@
       <p>Throughout this project, we learned how <span class="key-term">data diversity</span> is more important than quantity. Having varied backgrounds, angles, and lighting is just as important as the number of photos. Otherwise, the AI learns to recognize the table or background instead of the leaf itself. We also learned the importance of <span class="key-term">class balance</span>. Keeping an equal 100-100-100 split prevented the model from becoming biased toward guessing 1 dominant category. Lastly, we also learned how visually overlapping cases (like a leaf with heavy brown spots vs. a completely obstructed/decayed leaf) showed how important strict, consistent <span class="key-term">labeling criteria</span> are during data collection. Buolamwini challenges the idea that AI is an objective, all-knowing “black box” and emphasizes that every algorithm reflects human choices (what gets labeled, what gets left out, etc.). We acknowledge that our model does not act independently in making decisions and any confusion the model has on borderline leaves/edge cases directly reflects our group’s definitions (what is considered Damaged vs. Obstructed) and sample choices that we agreed upon during data collection. Our biggest takeaway as a group aligns with a central theme of Unmasking AI: machine learning models are not neutral or foolproof. Their accuracy and fairness depend entirely on the intentionality and care humans put into creating the training data.</p>
     </section>
 
+    <!-- DEMO & LINK -->
+    <!-- Same two-column layout as the Project Scope section: class="flip" puts the video on the left. VN -->
+    <section class="tm-section flip" aria-labelledby="demo-title">
+      <div class="tm-text">
+        <h2 id="demo-title">Demo Walkthrough</h2>
+        <ol>
+          <li>The model correctly analyzes a dark green leaf and classifies it as healthy with 100% confidence level.</li>
+          <li>The model evaluates a partially brown, broken leaf, accurately identifying it as damaged with a 98% confidence level (and 2% healthy).</li>
+          <li>The model assesses a deteriorated leaf, correctly classifying it as obstructed with an 87% confidence level (and 13% damaged).</li>
+        </ol>
+      </div>
+
+      <div class="tm-media">
+        <div class="video-embed">
+          <video controls width="100%">
+            <source src="assets/demo-video.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+
+    <!--  LINK TO TRY THE MODEL VN -->
+    <section class="tm-try" aria-labelledby="try-title">
+      <h2 id="try-title">Link to try our model!</h2>
+      <p>Try our model by clicking the link below! You can either hold a leaf up to your camera to classify it or upload a leaf picture.</p>
+      <p><a href="https://teachablemachine.withgoogle.com/models/m2W2S7VCC/" target="_blank" rel="noopener">https://teachablemachine.withgoogle.com/models/m2W2S7VCC/</a></p>
+    </section>
+
   </main>
 
 </body>
